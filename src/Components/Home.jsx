@@ -61,7 +61,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col md:flex-row gap-12">
-      <div className="bg-white p-4 rounded-lg w-2/5 mb-36">
+      <div className="bg-white p-4 rounded-lg md:w-2/5 md:mb-36">
         <div>
           <img src={design} alt="" />
         </div>
@@ -78,7 +78,7 @@ export default function Home() {
         </button>
       </div>
 
-      <div className="bg-[#F8F7FC] p-4 rounded-lg w-2/5 mt-36">
+      <div className="bg-[#F8F7FC] p-4 rounded-lg md:w-2/5 md:mt-36">
         <p className="font-bold text-2xl">Get Loan</p>
         <div className="bg-[#5E67E0] text-white p-2 rounded-xl shadow-md shadow-[#969cec]">
           <p className="text-gray-300">Maximum Amount</p>
