@@ -143,7 +143,12 @@ export default function Form() {
       <div className="flex flex-col gap-4 items-center justify-center bg-gray-200 p-6 rounded-lg md:w-2/5">
         <div className="flex md:flex-row w-full flex-col items-center justify-between pb-2">
           <div className="text-4xl font-bold">Form</div>
-          
+          <Link
+            to={"/"}
+            className="bg-green-500 hover:bg-green-700 rounded-xl p-2 text-white font-bold px-6"
+          >
+            Home
+          </Link>
         </div>
         <form id="form" className="flex flex-col gap-4 w-full" onSubmit={handleSubmit}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

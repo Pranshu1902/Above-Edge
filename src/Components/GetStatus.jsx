@@ -105,7 +105,12 @@ export default function GetStatus() {
               Retrieve Data
             </Link>
           </p>
-          
+          <Link
+            to={"/"}
+            className="bg-green-500 hover:bg-green-700 rounded-xl p-2 text-white font-bold px-6"
+          >
+            Home
+          </Link>
         </div>
       </div>
     </div>
