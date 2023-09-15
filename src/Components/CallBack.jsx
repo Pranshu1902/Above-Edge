@@ -158,10 +158,10 @@ export default function CallBack() {
         </div>
       </div>
       {message.length > 0 && (
-        <div className="bg-white mt-6 p-3 rounded-xl w-2/5">
+        <div className="bg-white mt-6 p-3 rounded-xl md:w-2/5">
           <div className="flex flex-col justify-center text-green-600 font-medium">
             <p className="text-xl">{message}</p>
-            <div className="grid grid-cols-2 mt-3">
+            <div className="grid grid-cols-1 md:grid-cols-2 mt-3">
               {attributes.map((field, ind) => (
                 <p key={ind}>
                   {field}: <b>{data[field]}</b>
