@@ -10,7 +10,7 @@ https://above-edge.vercel.app/status
 
 ## Screenshots
 Home Page:
-![image](https://github.com/Pranshu1902/Above-Edge/assets/70687348/aae489cd-bded-4f3f-8f67-e76cd0a2e864)
+![image](https://github.com/Pranshu1902/Above-Edge/assets/70687348/4771d2e8-d807-45dc-bbdb-ee1b1a2953e6)
 
 Form Page:
 ![image](https://github.com/Pranshu1902/Above-Edge/assets/70687348/c4f28579-fa3b-4d75-9ac2-48335b8517fc)
