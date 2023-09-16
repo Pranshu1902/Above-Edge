@@ -145,18 +145,25 @@ export default function Form() {
           <div className="text-4xl font-bold">Form</div>
           <Link
             to={"/"}
-            className="bg-green-500 hover:bg-green-700 rounded-xl p-2 text-white font-bold px-6"
+            className="bg-blue-500 duration-300 transition hover:bg-blue-700 rounded-lg p-2 text-white font-bold px-6 shadow-lg"
           >
             Home
           </Link>
         </div>
-        <form id="form" className="flex flex-col gap-4 w-full" onSubmit={handleSubmit}>
+        <form
+          id="form"
+          className="flex flex-col gap-4 w-full"
+          onSubmit={handleSubmit}
+        >
+          {/* Form Fields */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {fields.map((field) => formField(field))}
           </div>
+          {/* Error Message */}
           {error.length > 0 && (
             <p className="flex justify-center text-red-500">Error: {error}</p>
           )}
+          {/* Success Message */}
           {message.length > 0 && (
             <p className="flex justify-center text-green-600 font-medium text-xl">
               Success: {message}
@@ -170,7 +177,7 @@ export default function Form() {
             <button
               type="submit"
               disabled={loading}
-              className="bg-blue-500 hover:bg-blue-700 p-2 text-white rounded-lg font-bold"
+              className="bg-blue-500 hover:bg-blue-700 p-2 text-white rounded-lg font-bold shadow-lg duration-300 transition"
             >
               Submit
             </button>

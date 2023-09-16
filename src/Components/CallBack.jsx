@@ -124,7 +124,7 @@ export default function CallBack() {
             <button
               disabled={loading}
               type="submit"
-              className="bg-blue-500 hover:bg-blue-700 p-2 rounded-lg text-white font-bold"
+              className="bg-blue-500 hover:bg-blue-700 p-2 rounded-lg text-white font-bold shadow-lg duration-300 transition"
             >
               Get Data
             </button>
@@ -151,7 +151,7 @@ export default function CallBack() {
           </p>
           <Link
             to={"/"}
-            className="bg-blue-500 hover:bg-blue-700 rounded-xl p-2 text-white font-bold px-6"
+            className="bg-blue-500 hover:bg-blue-700 rounded-lg p-2 text-white font-bold px-6 shadow-lg duration-300 transition"
           >
             Home
           </Link>
