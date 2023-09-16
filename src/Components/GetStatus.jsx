@@ -107,7 +107,7 @@ export default function GetStatus() {
           </p>
           <Link
             to={"/"}
-            className="bg-green-500 hover:bg-green-700 rounded-xl p-2 text-white font-bold px-6"
+            className="bg-blue-500 hover:bg-blue-700 rounded-xl p-2 text-white font-bold px-6"
           >
             Home
           </Link>

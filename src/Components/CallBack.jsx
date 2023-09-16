@@ -151,25 +151,27 @@ export default function CallBack() {
           </p>
           <Link
             to={"/"}
-            className="bg-green-500 hover:bg-green-700 rounded-xl p-2 text-white font-bold px-6"
+            className="bg-blue-500 hover:bg-blue-700 rounded-xl p-2 text-white font-bold px-6"
           >
             Home
           </Link>
         </div>
       </div>
       {message.length > 0 && (
-        <div className="bg-white mt-6 p-3 rounded-xl md:w-2/5">
-          <div className="flex flex-col justify-center text-green-600 font-medium">
-            <p className="text-xl">{message}</p>
-            <div className="grid grid-cols-1 md:grid-cols-2 mt-3">
-              {attributes.map((field, ind) => (
-                <p key={ind}>
-                  {field}: <b>{data[field]}</b>
-                </p>
-              ))}
-            </div>
-          </div>
+        <div className="bg-gray-200 mt-6 p-4 rounded-xl md:w-2/5">
+        <p className="font-medium text-xl text-green-600">{message}</p>
+        <div className="w-full overflow-x-auto">
+          <table className="w-full table-fixed">
+            {attributes.map((field, ind) => (
+              <tr key={ind}>
+                <td className="w-1/2 p-2">{field.toUpperCase()}</td>
+                <td className="font-medium w-1/2 p-2">{data[field]}</td>
+              </tr>
+            ))}
+          </table>
         </div>
+      </div>
+      
       )}
     </div>
   );

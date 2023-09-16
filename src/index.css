@@ -1,4 +1,13 @@
-
+table,
+th,
+td {
+  border: 1px solid gray;
+  border-collapse: collapse;
+}
+th,
+td {
+  background-color: #ffffff;
+}
 
 @tailwind base;
 @tailwind components;

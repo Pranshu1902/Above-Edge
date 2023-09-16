@@ -2,27 +2,27 @@ import design from "../assets/design.png";
 import Photo from "../assets/photo.png";
 
 export default function Home() {
-  const LoanCard = (icon, color, name, interest, amount) => {
+  const LoanCard = (recommendation) => {
     return (
       <div className="bg-white p-2 shadow-md rounded-xl">
         <div className="flex gap-2 items-center">
           <i
-            className={`${icon} bg-green-300 p-2 rounded-lg text-green-800`}
+            className={`${recommendation.icon} bg-green-300 p-2 rounded-lg text-green-800`}
           ></i>
           <div className="flex flex-col">
-            <p className="font-bold text-xl">{name}</p>
+            <p className="font-bold text-xl">{recommendation.name}</p>
             <p className="text-sm text-gray-500">
-              Lowest interest as low as {interest}%
+              Lowest interest as low as {recommendation.interest}%
             </p>
           </div>
         </div>
         <div className="flex justify-around">
           <div className="flex flex-col">
-            <p className="font-bold text-xl">${amount}</p>
+            <p className="font-bold text-xl">${recommendation.amount}</p>
             <p>Maximum Amount</p>
           </div>
           <div className="flex flex-col">
-            <p className="font-bold text-xl">{interest}%</p>
+            <p className="font-bold text-xl">{recommendation.interest}%</p>
             <p>Interest</p>
           </div>
           <div className="flex flex-col">
@@ -60,31 +60,41 @@ export default function Home() {
   ];
 
   return (
-    <div className="flex flex-col md:flex-row gap-12">
-      <div className="bg-white p-4 rounded-lg md:w-2/5 md:mb-36">
+    <div className="flex flex-col justify-center md:flex-row gap-12">
+      <div className="bg-white flex flex-col justify-between p-4 rounded-3xl md:w-2/5 md:mb-28 shadow-md">
         <div>
-          <img src={design} alt="" />
+          <img src={design} alt="blue and red ball" />
         </div>
         <div className="flex justify-center">
-          <img src={Photo} alt="" />
+          <img src={Photo} alt="icon" />
         </div>
-        <p className="text-3xl font-bold">Place for getting student loan</p>
-        <p>
-          We provide the best loan offer for the student with flexible
-          conditions.
-        </p>
-        <button className="bg-[#4E58DD] text-white p-2 px-4 rounded-lg mt-6">
-          <i className="fa-solid fa-chevron-right"></i>
-        </button>
+        <div>
+          <p className="text-3xl font-bold">Place for getting student loan</p>
+          <p>
+            We provide the best loan offer for the student with flexible
+            conditions.
+          </p>
+        </div>
+        <div>
+          <button className="bg-[#4E58DD] text-white p-2 px-4 rounded-lg mt-6">
+            <i className="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
       </div>
 
-      <div className="bg-[#F8F7FC] p-4 rounded-lg md:w-2/5 md:mt-36">
+      <div className="bg-[#F8F7FC] p-4 rounded-3xl md:w-2/5 md:mt-28 shadow-md">
         <p className="font-bold text-2xl">Get Loan</p>
-        <div className="bg-[#5E67E0] text-white p-2 rounded-xl shadow-md shadow-[#969cec]">
+        <div className="bg-gradient-to-br mt-4 from-[#4D57D9] via-[#666EE0] to-[#4D57D9] text-white p-2 rounded-xl shadow-md shadow-[#969cec]">
           <p className="text-gray-300">Maximum Amount</p>
           <p className="font-bold text-3xl">$50000</p>
-          <div className="flex justify-around text-ms mt-6">
-            <p>Applied</p>
+          <div className="relative flex justify-around mt-6">
+            <hr className="absolute text-gray-400 w-2/3 mt-2" />
+            <p className="p-2 rounded-full bg-white"></p>
+            <p className="p-2 rounded-full bg-gray-400"></p>
+            <p className="p-2 rounded-full bg-gray-400"></p>
+          </div>
+          <div className="flex justify-around text-ms">
+            <p>Apply</p>
             <p className="text-gray-300">Review</p>
             <p className="text-gray-300">Approval</p>
           </div>
@@ -97,15 +107,7 @@ export default function Home() {
 
         <p className="font-bold mt-6">Recommended Loan</p>
         <div className="flex flex-col gap-4 mt-4">
-          {recommended.map((recommendation) =>
-            LoanCard(
-              recommendation.icon,
-              recommendation.color,
-              recommendation.name,
-              recommendation.interest,
-              recommendation.amount
-            )
-          )}
+          {recommended.map((recommendation) => LoanCard(recommendation))}
         </div>
       </div>
     </div>
