@@ -29,9 +29,9 @@ export default function GetStatus() {
       setError(data.msg);
     } else if (data.code === "200") {
       setMessage(data);
+      setReferenceID("");
     }
 
-    console.log(data);
     setLoading(false);
   };
 

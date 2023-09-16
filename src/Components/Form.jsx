@@ -36,8 +36,6 @@ export default function Form() {
     setMessage("");
     e.preventDefault();
 
-    console.log(form);
-
     const res = await fetch(url, {
       method: "PUT",
       headers: {
