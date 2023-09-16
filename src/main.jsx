@@ -2,32 +2,22 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Form from "./Components/Form.jsx";
 import GetStatus from "./Components/GetStatus.jsx";
 import CallBack from "./Components/CallBack.jsx";
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-  },
-  {
-    path: "/form",
-    element: <Form />,
-  },
-  {
-    path: "/status",
-    element: <GetStatus />,
-  },
-  {
-    path: "/retrieve",
-    element: <CallBack />,
-  },
-]);
+import NotFound from "./Components/NotFound.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Router>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/form" element={<Form />} />
+        <Route path="/status" element={<GetStatus />} />
+        <Route path="/retrieve" element={<CallBack />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Router>
   </React.StrictMode>
 );

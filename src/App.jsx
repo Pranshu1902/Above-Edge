@@ -9,7 +9,7 @@ function App() {
       </div>
       <Link
         to={"/form"}
-        className="bg-blue-500 hover:bg-blue-700 rounded-xl p-3 text-white font-bold px-16 shadow"
+        className="bg-blue-500 hover:bg-blue-700 rounded-xl p-3 text-white font-bold px-16 shadow-lg tranition duration-300"
       >
         Form
       </Link>
