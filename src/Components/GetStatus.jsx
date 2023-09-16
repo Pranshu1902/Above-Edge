@@ -59,8 +59,8 @@ export default function GetStatus() {
             <p className="flex justify-center text-red-500">Error: {error}</p>
           )}
           {message && (
-            <div className="flex flex-col justify-center text-green-600">
-              <p className="font-medium text-xl">{message.msg}</p>
+            <div className="flex flex-col justify-center">
+              <p className="font-medium text-xl text-green-600">{message.msg}</p>
               <p>
                 Reference ID: <b>{message.model.referenceId}</b>
               </p>

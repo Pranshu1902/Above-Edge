@@ -5,7 +5,7 @@ import "./index.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Form from "./Components/Form.jsx";
 import GetStatus from "./Components/GetStatus.jsx";
-import CallBack from "./Components/CallBack.jsx";
+import RetrieveData from "./Components/RetrieveData.jsx";
 import NotFound from "./Components/NotFound.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -15,7 +15,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/" element={<App />} />
         <Route path="/form" element={<Form />} />
         <Route path="/status" element={<GetStatus />} />
-        <Route path="/retrieve" element={<CallBack />} />
+        <Route path="/retrieve" element={<RetrieveData />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { url, username, password, attributes } from "../constant";
 import { Link } from "react-router-dom";
 
-export default function CallBack() {
+export default function RetrieveData() {
   const [referenceID, setReferenceID] = useState("");
   const [status, setStatus] = useState("");
   const [statusCode, setStatusCode] = useState("");
