@@ -7,7 +7,7 @@ export default function Home() {
       <div className="bg-white p-2 shadow-md rounded-xl">
         <div className="flex gap-2 items-center">
           <i
-            className={`${recommendation.icon} bg-green-300 p-2 rounded-lg text-green-800`}
+            className={`${recommendation.icon} bg-${recommendation.color}-200 p-2 rounded-lg text-${recommendation.color}-600`}
           ></i>
           <div className="flex flex-col">
             <p className="font-bold text-xl">{recommendation.name}</p>
@@ -19,11 +19,11 @@ export default function Home() {
         <div className="flex justify-around">
           <div className="flex flex-col">
             <p className="font-bold text-xl">${recommendation.amount}</p>
-            <p>Maximum Amount</p>
+            <p className="text-sm text-gray-500">Maximum Amount</p>
           </div>
           <div className="flex flex-col">
             <p className="font-bold text-xl">{recommendation.interest}%</p>
-            <p>Interest</p>
+            <p className="text-sm text-gray-500">Interest</p>
           </div>
           <div className="flex flex-col">
             <div className="bg-[#44A7EA] p-2 rounded-lg text-white">
@@ -38,14 +38,14 @@ export default function Home() {
   const recommended = [
     {
       icon: "fa-solid fa-credit-card",
-      color: "violet",
+      color: "purple",
       name: "Policy Loan",
       interest: 0.2,
       amount: 20000,
     },
     {
       icon: "fa-solid fa-user-graduate",
-      color: "red",
+      color: "orange",
       name: "Post Graduation Loan",
       interest: 0.3,
       amount: 22000,
