@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { url, username, password } from "../constant";
 import { Link } from "react-router-dom";
 
@@ -25,6 +25,10 @@ export default function Form() {
   const [error, setError] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
 
   const handleSubmit = async (e) => {
     setLoading(true);
