@@ -20,7 +20,7 @@ Response:
 Check Status Page:
 ![image](https://github.com/Pranshu1902/Above-Edge/assets/70687348/6970c830-0f1a-4d85-9777-424d23410aa8)
 Response:
-![image](https://github.com/Pranshu1902/Above-Edge/assets/70687348/7c078230-a8eb-43ed-8efa-804fc4bfeebd)
+![image](https://github.com/Pranshu1902/Above-Edge/assets/70687348/c5e89c4e-2631-4d32-9b9a-50e6666882b5)
 
 Retrieve Data Page:
 ![image](https://github.com/Pranshu1902/Above-Edge/assets/70687348/19d33500-6f5b-4eab-b17e-6b8c6e457761)
